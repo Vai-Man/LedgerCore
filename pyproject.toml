@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ledgercore"
+version = "0.1.0"
+description = "A small double-entry payments ledger with idempotent writes and reconciliation"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Vaibhav Manihar" }]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools]
+packages = ["ledgercore"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
